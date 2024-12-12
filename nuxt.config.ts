@@ -1,10 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
+
   css: [
-    '@/assets/css/main.css'
+      './assets/css/tailwind.css',
+      '@/assets/css/styling.css',
+
   ],
+
+  link: [
+    { rel: "icon", type: "image/x-icon", href: "/public/favicon.ico" },
+  ],
+
   devtools: { enabled: true },
+
   build: {
     postcss: {
       plugins: {
@@ -13,6 +22,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   app: {
     head: {
       link: [
@@ -24,4 +34,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ['@nuxtjs/tailwindcss'],
 })
