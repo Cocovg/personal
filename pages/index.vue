@@ -13,14 +13,18 @@
     </div>
   </div>
 
-  <div class="block h-[800px]">
+  <div class="block ">
     <div class="flex items-end">
       <img  src="public/img/shape2.png" >
     </div>
   </div>
   <div class="overflow-hidden">
-    <div class="bg-amber-700 w-full h-24 absolute z-20 "></div>
-    <div id="shape-container" class="relative w-full h-screen overflow-hidden -mt-8"></div>
+    <div class="">
+
+      <img class="absolute -mt-96 " src="public/img/shape3.png">
+
+      <div id="shape-container" class="relative w-full h-screen overflow-hidden z-20" ></div>
+    </div>
   </div>
 
 
@@ -36,19 +40,15 @@ export default {
   },
   methods: {
     getRandomColor() {
-      const letters = "0123456789ABCDEF";
-      let color = "#";
-      for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
+      const colors = ["#2CF6B3","#C9DDFF", "#DE6C83", "#ECB0E1"];
+      return colors[Math.floor(Math.random() * colors.length)];
     },
     createShapes() {
       const containerHeight = document.getElementById("shape-container").clientHeight;
 
       // Willekeurige breedte en hoogte voor de eerste shape
-      const height1 = Math.max(250, Math.floor(Math.random() * 300) + 50); // Hoogte minimaal 250px
-      const height2 = Math.max(0, containerHeight - height1 - 100); // Resthoogte zodat totaal een blok vormt
+      const height1 = Math.max(50, Math.floor(Math.random() * 200) + 50); // Hoogte minimaal 250px
+      const height2 = Math.max(80, Math.floor(Math.random() * 200) + 50); // Resthoogte zodat totaal een blok vormt
 
       // Willekeurig rotatiepunt
       const rotateX1 = Math.floor(Math.random() * window.innerWidth);
@@ -60,7 +60,7 @@ export default {
       const shapeElement1 = document.createElement("div");
       shapeElement1.id = "shape1";
       shapeElement1.style.backgroundColor = this.getRandomColor();
-      shapeElement1.classList.add("absolute", "top-[100px]", "left-0", "w-full");
+      shapeElement1.classList.add("absolute", "top-[150px]", "left-0", "w-full");
       shapeElement1.style.height = `${height1}px`;
       shapeElement1.style.transformOrigin = `${rotateX1}px ${rotateY1}px`;
       shapeElement1.style.transform = `skew(${Math.floor(Math.random() * 50) - 25}deg, ${Math.floor(Math.random() * 50) - 25}deg)`;
@@ -71,7 +71,7 @@ export default {
       shapeElement2.id = "shape2";
       shapeElement2.style.backgroundColor = this.getRandomColor();
       shapeElement2.classList.add("absolute", "left-0", "w-full");
-      shapeElement2.style.top = `${100 + height1}px`;
+      shapeElement2.style.top = `${150 + height1}px`;
       shapeElement2.style.height = `${height2}px`;
       shapeElement2.style.transformOrigin = `${rotateX2}px ${rotateY2}px`;
       shapeElement2.style.transform = `skew(${Math.floor(Math.random() * 50) - 25}deg, ${Math.floor(Math.random() * 50) - 25}deg)`;
