@@ -8,6 +8,9 @@ img{
 body{
     overflow-x: hidden;
 }
+.dighead{
+    color: white;
+}
 .propic{
     width: 32%!important;
 }
@@ -18,13 +21,15 @@ body{
     width: 15%!important;
     height: 90%;
 }
+.slidepic{
+    width: 60%!important;
+}
 #shape1, #shape2 {
     width: 150vw; /* 150% van de viewport-breedte */
     margin-left: -150px;
     position: absolute;
 }
 #shape-container {
-    position: relative;
     overflow: visible; /* Laat de inhoud vrij groeien */
     width: 100%; /* Gebruik volledige breedte */
     height: auto; /* Laat de container meegroeien */

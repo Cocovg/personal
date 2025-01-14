@@ -1,29 +1,21 @@
 <template>
-  <div class="relative overflow-hidden">
+  <div class="relative overflow-hidden" :style="{ width: sliderWidth + 'px',}">
     <div
-        class="flex transition-transform duration-1000 ease-in-out"
-        :style="{ transform: 'translateX(' + translateX + 'px)' }"
+        class="flex animate-scroll"
+        :style="{ width: totalWidth + 'px', transform: `translateX(${translateX}px)` }"
     >
-      <img
-          v-for="(image, index) in images"
+      <div
+          v-for="(image, index) in infiniteImages"
           :key="index"
-          :src="image"
-          alt="slider image"
-          class="w-full h-auto"
-      />
-    </div>
-
-    <div
-        class="absolute top-1/2 left-0 transform -translate-y-1/2 p-4 cursor-pointer text-white"
-        @click="prevSlide"
-    >
-      &#8592;
-    </div>
-    <div
-        class="absolute top-1/2 right-0 transform -translate-y-1/2 p-4 cursor-pointer text-white"
-        @click="nextSlide"
-    >
-      &#8594;
+          :style="{ width: slideWidth + 'px'}"
+          class=""
+      >
+        <img
+            :src="image"
+            alt="slider image"
+            class="slidepic object-cover rounded-2xl"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -32,46 +24,56 @@
 export default {
   data() {
     return {
-      images: [
-        'public/img/slider-placeholder.png',
-        'public/img/slider-placeholder.png',
-        'public/img/slider-placeholder.png',
-        'public/img/slider-placeholder.png',
-      ],
-      currentIndex: 0,
-      slideInterval: null,
+      images: ['/img/slider-placeholder.png', '/img/slider-placeholder.png', '/img/slider-placeholder.png'],
+      sliderWidth: 1700, // Initial width of the slider
+      translateX: 0,
+      speed: 1, // Scroll speed (pixels per frame)
     };
   },
   computed: {
-    translateX() {
-      return -(this.currentIndex * 100); // Schuift de afbeeldingen horizontaal
+    infiniteImages() {
+      return [...this.images, ...this.images]; // Duplicate images for continuous scrolling
+    },
+    totalWidth() {
+      return this.infiniteImages.length * this.slideWidth; // Total width of the content
+    },
+    slideWidth() {
+      return this.sliderWidth / 3; // Width of each slide
     },
   },
   methods: {
-    nextSlide() {
-      this.currentIndex = (this.currentIndex + 1) % this.images.length;
+    startSlider() {
+      setInterval(() => {
+        // Update the translateX position for smooth scrolling
+        this.translateX -= this.speed;
+
+        // Reset translateX to 0 when it reaches half the total width for infinite loop
+        if (Math.abs(this.translateX) >= this.totalWidth / 2) {
+          this.translateX = 0;
+        }
+      }, 16); // This interval controls the speed of the scroll
     },
-    prevSlide() {
-      this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
-    },
-    startAutoSlide() {
-      this.slideInterval = setInterval(() => {
-        this.nextSlide();
-      }, 3000); // Elke 3 seconden wisselt de afbeelding
-    },
-    stopAutoSlide() {
-      clearInterval(this.slideInterval);
+    updateWidth() {
+      // Update the slider width dynamically based on window size
+      this.sliderWidth = window.innerWidth * 0.8; // 80% of the window width
     },
   },
   mounted() {
-    this.startAutoSlide();
+    this.startSlider(); // Start the slider animation
+    window.addEventListener('resize', this.updateWidth); // Update width on window resize
   },
   beforeDestroy() {
-    clearInterval(this.slideInterval);
+    window.removeEventListener('resize', this.updateWidth); // Cleanup on component destroy
   },
 };
 </script>
 
 <style scoped>
-/* Voeg extra styling toe als nodig */
+/* Basic styles for smooth scrolling */
+.animate-scroll {
+  display: flex;
+  transition: transform 0.01s ease-in-out;
+
+}
+
 </style>
