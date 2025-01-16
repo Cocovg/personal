@@ -25,12 +25,12 @@ body{
     width: 60%!important;
 }
 #shape1, #shape2 {
-    width: 150vw; /* 150% van de viewport-breedte */
+    width: 150vw;
     margin-left: -150px;
     position: absolute;
 }
 #shape-container {
-    overflow: visible; /* Laat de inhoud vrij groeien */
-    width: 100%; /* Gebruik volledige breedte */
-    height: auto; /* Laat de container meegroeien */
+    overflow: visible;
+    width: 100%;
+    height: auto;
 }

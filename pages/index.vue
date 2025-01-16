@@ -26,27 +26,23 @@
     <img src="public/img/shape4.png" class="-mt-96">
   </div>
   <div class="">
-    <!-- Web Images -->
+
     <div class="absolute left-0 w-full flex justify-center space-x-4 z-50">
       <img src="public/img/web.png" class="webpic2">
       <img src="public/img/web.png" class="webpic">
       <img src="public/img/web.png" class="webpic2">
     </div>
+    <img class="absolute -mt-96 " src="public/img/shape3.png">
     <div id="shape-container" class="relative mt-24">
-      <!-- Eerste Shape -->
       <div class="relative z-40">
-        <MovingShapes3 class="z-0"/>
-        <MovingShapes class="z-50"/>
+        <MovingShapes3 class="z-0 "/>
+        <MovingShapes class="z-50 "/>
+        <MovingShapes2 class="z-50"/>
 
       </div>
 
-      <!-- Shape Image -->
-      <img class="absolute -mt-96 " src="public/img/shape3.png">
 
-      <!-- Tweede Shape -->
-      <div class="relative z-40"> <!-- Gebruik grotere marge en lagere z-index -->
 
-      </div>
 
 
     </div>
