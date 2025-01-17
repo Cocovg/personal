@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      shapeClass: 'h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px]',
+      shapeClass: 'h-[500px] sm:h-[600px] md:h-[300px] lg:h-[300px]',
       shapeStyle: this.generateRandomShape(),
     };
   },

@@ -22,7 +22,6 @@ export default {
       return {
         backgroundColor: "#ECB0E1",
         clipPath: polygon,
-        height: "300px",
       };
     },
   },

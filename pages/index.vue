@@ -35,16 +35,23 @@
     <img class="absolute -mt-96 " src="public/img/shape3.png">
     <div id="shape-container" class="relative mt-24">
       <div class="relative z-40">
-        <MovingShapes3 class="z-0 "/>
         <MovingShapes class="z-50 "/>
-        <MovingShapes2 class="z-50"/>
-
       </div>
+    </div>
+  </div>
+  <div class="">
 
-
-
-
-
+    <div class="absolute left-0 w-full flex justify-center space-x-4 z-50">
+      <img src="public/img/web.png" class="webpic2">
+      <img src="public/img/web.png" class="webpic">
+      <img src="public/img/web.png" class="webpic2">
+    </div>
+    <img class="absolute -mt-96 " src="public/img/shape3.png">
+    <div id="shape-container" class="relative mt-24">
+      <div class="relative z-40">
+        <MovingShapes3 class="z-0 "/>
+        <MovingShapes2 class="z-50"/>
+      </div>
     </div>
   </div>
 </template>

@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       images: ['/img/slider-placeholder.png', '/img/slider-placeholder.png', '/img/slider-placeholder.png'],
-      sliderWidth: 1700,
+      sliderWidth: 1000, //1700 past op laptop. maar zorgt voor rare overflowproblemen
       translateX: 0,
       speed: 1,
     };
