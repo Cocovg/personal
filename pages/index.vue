@@ -80,18 +80,24 @@
     </div>
     
     <!-- Main Content -->
-    <main id="main-content" class="min-h-screen bg-white p-8 z-20 relative">
+    <main id="main-content" class="min-h-screen bg-gradient-to-b from-[#000911] to-[#0f1a2d] text-white p-8 z-20 relative">
       <div class="max-w-6xl mx-auto py-16">
-        <h2 class="text-3xl font-bold mb-6">Main Content</h2>
-        <p class="text-lg mb-4">Your website content goes here...</p>
-        <div class="h-96 bg-gray-100 flex items-center justify-center rounded-lg mb-8">
-          <span class="text-gray-500">Content Section</span>
+        <h2 class="text-3xl font-bold mb-6 text-[#b9d5ff]">Main Content</h2>
+        <p class="text-lg mb-4 text-gray-300">Your website content goes here...</p>
+        <div class="h-96 bg-[#1a1e2a] border border-[#3b68ff]/30 flex items-center justify-center rounded-lg mb-8 overflow-hidden relative group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-[#3b68ff]/10 to-[#a668ff]/10 opacity-50"></div>
+          <span class="text-[#b9d5ff] relative z-10 group-hover:text-[#FFC87C] transition-colors duration-300">Content Section</span>
         </div>
-        <p class="text-lg mb-4">
+        <p class="text-lg mb-8 text-gray-300">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo id nulla tincidunt
           consequat. Suspendisse potenti. Donec euismod, nisl eget aliquam ultricies, nisl nisl
           aliquet nisl, eget aliquam nisl nisl eget.
         </p>
+        
+        <!-- Gold accent elements -->
+        <div class="flex justify-center">
+          <div class="w-1/2 h-0.5 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent my-6 opacity-70"></div>
+        </div>
       </div>
     </main>
   </div>
@@ -115,12 +121,13 @@ body {
   min-height: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: #000911;
+  color: #fff;
 }
 
 /* Ensure main content has a solid background that fully covers the 3D scene */
 #main-content {
   position: relative;
-  background-color: white;
-  box-shadow: 0 -10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 -10px 20px rgba(0,0,0,0.3);
 }
 </style>
