@@ -64,7 +64,11 @@
       <div class="container mx-auto px-8 pt-32 pb-48 relative z-10">
         <div class="angled-content">
           <div class="text-wrapper mb-16 overflow-hidden">
-            <h2 class="text-7xl font-bold text-white tracking-wider flex items-center gap-6 whitespace-nowrap">
+            <h2 class="text-7xl font-bold text-white tracking-wider flex items-center gap-6 whitespace-nowrap animate-scroll-text">
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
               DIGITAL ART •
               DIGITAL ART •
               DIGITAL ART •
@@ -81,8 +85,9 @@
           </div>
           
           <!-- Art Gallery Carousel -->
-          <div class="art-carousel-wrapper relative -mx-32">
-            <div class="art-slider-continuous flex gap-6 px-32">
+          <div class="art-carousel-container relative">
+            <div class="art-carousel-wrapper">
+              <div class="art-slider-continuous flex gap-6">
               <!-- First set of items -->
               <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
                 <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
@@ -145,6 +150,7 @@
                 <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
                   <img src="https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?w=400&h=400&fit=crop" alt="Digital Art 6" class="w-full h-full object-cover"/>
                 </div>
+              </div>
               </div>
             </div>
           </div>
@@ -404,14 +410,22 @@
 /* Text Wrapper */
 .text-wrapper {
   position: relative;
-  width: calc(100% + 16rem);
-  margin-left: -8rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
 }
 
 /* Art Carousel */
-.art-carousel-wrapper {
+.art-carousel-container {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  padding: 20px 0;
   overflow: hidden;
-  width: calc(100% + 16rem);
+}
+
+.art-carousel-wrapper {
+  overflow: visible;
   position: relative;
 }
 
@@ -428,6 +442,19 @@
   100% {
     transform: translateX(-1872px); /* 6 items: 6 * (288px width + 24px gap) = 6 * 312px = 1872px */
   }
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-text {
+  animation: scrollText 20s linear infinite;
 }
 
 .art-carousel-wrapper:hover .art-slider-continuous {
