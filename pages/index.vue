@@ -15,7 +15,7 @@
     </section>
 
     <!-- Welcome Section with Diagonal Background -->
-    <section class="welcome-section relative overflow-hidden -mt-1">
+    <section class="welcome-section relative overflow-hidden -mt-24">
       <div class="diagonal-bg bg-gradient-to-br from-[#B8D4F1] to-[#E8D4F1]"></div>
       
       <div class="container mx-auto px-8 pt-32 pb-48 relative z-10">
@@ -61,78 +61,93 @@
     <!-- Digital Art Section -->
     <section class="digital-art-section relative overflow-hidden -mt-40">
       <div class="diagonal-bg bg-[#E89BB5]"></div>
-      <div class="container mx-auto px-8 pt-48 pb-48 relative z-10">
+      <div class="container mx-auto px-8 pt-32 pb-48 relative z-10">
         <div class="angled-content">
-          <div class="text-wrapper mb-12 overflow-hidden">
-            <h2 class="text-5xl font-bold text-white tracking-wider flex items-center gap-4 whitespace-nowrap">
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
-              <svg class="w-8 h-8" fill="white" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/></svg>
-              DIGITAL ART
+          <div class="text-wrapper mb-16 overflow-hidden">
+            <h2 class="text-7xl font-bold text-white tracking-wider flex items-center gap-6 whitespace-nowrap">
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
+              DIGITAL ART •
             </h2>
           </div>
           
           <!-- Art Gallery Carousel -->
           <div class="art-carousel-wrapper relative -mx-32">
-            <div class="art-slider flex gap-6 transition-transform duration-500 ease-in-out px-32" ref="artSlider" :style="{ transform: `translateX(-${currentSlide * slideWidth}px)` }">
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop" alt="Digital Art 1" class="w-full h-full object-cover"/>
+            <div class="art-slider-continuous flex gap-6 px-32">
+              <!-- First set of items -->
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop" alt="Digital Art 1" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&h=400&fit=crop" alt="Digital Art 2" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1561998338-13ad7883b20f?w=400&h=400&fit=crop" alt="Digital Art 3" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=400&h=400&fit=crop" alt="Digital Art 4" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=400&h=400&fit=crop" alt="Digital Art 5" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?w=400&h=400&fit=crop" alt="Digital Art 6" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              
+              <!-- Duplicate set for seamless loop -->
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop" alt="Digital Art 1" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&h=400&fit=crop" alt="Digital Art 2" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1561998338-13ad7883b20f?w=400&h=400&fit=crop" alt="Digital Art 3" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=400&h=400&fit=crop" alt="Digital Art 4" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=400&h=400&fit=crop" alt="Digital Art 5" class="w-full h-full object-cover"/>
+                </div>
+              </div>
+              <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
+                <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?w=400&h=400&fit=crop" alt="Digital Art 6" class="w-full h-full object-cover"/>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=400&h=400&fit=crop" alt="Digital Art 2" class="w-full h-full object-cover"/>
-            </div>
-          </div>
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1561998338-13ad7883b20f?w=400&h=400&fit=crop" alt="Digital Art 3" class="w-full h-full object-cover"/>
-            </div>
-          </div>
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?w=400&h=400&fit=crop" alt="Digital Art 4" class="w-full h-full object-cover"/>
-            </div>
-          </div>
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=400&h=400&fit=crop" alt="Digital Art 5" class="w-full h-full object-cover"/>
-            </div>
-          </div>
-          <div class="art-item flex-shrink-0 w-72 bg-white/90 rounded-2xl p-4 shadow-xl">
-            <div class="h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1569172122301-bc5008bc09c5?w=400&h=400&fit=crop" alt="Digital Art 6" class="w-full h-full object-cover"/>
-            </div>
-          </div>
-        </div>
-        
-          <!-- Carousel Indicators -->
-          <div class="flex justify-center gap-2 mt-8">
-            <button 
-              v-for="(item, index) in totalSlides" 
-              :key="index"
-              @click="currentSlide = index"
-              class="w-3 h-3 rounded-full transition"
-              :class="currentSlide === index ? 'bg-white' : 'bg-white/40'"
-            ></button>
-          </div>
-        </div>
         </div>
       </div>
     </section>
@@ -269,26 +284,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-
-const artSlider = ref<HTMLElement | null>(null);
-const currentSlide = ref(0);
-const totalSlides = 6; // Total number of art items
-const slideWidth = 312; // Width of art item (288px) + gap (24px)
-let carouselInterval: ReturnType<typeof setInterval> | null = null;
-
-onMounted(() => {
-  // Auto-advance carousel every 3 seconds
-  carouselInterval = setInterval(() => {
-    currentSlide.value = (currentSlide.value + 1) % totalSlides;
-  }, 3000);
-});
-
-onUnmounted(() => {
-  if (carouselInterval) {
-    clearInterval(carouselInterval);
-  }
-});
+// Continuous CSS-based carousel - no JavaScript needed for animation
 </script>
 
 <style scoped>
@@ -401,6 +397,8 @@ onUnmounted(() => {
   transform: rotate(5deg);
   transform-origin: center center;
   padding: 2rem 0;
+  /* Ensure child animations work */
+  transform-style: preserve-3d;
 }
 
 /* Text Wrapper */
@@ -417,9 +415,23 @@ onUnmounted(() => {
   position: relative;
 }
 
-.art-slider {
+.art-slider-continuous {
   display: flex;
   will-change: transform;
+  animation: slideCarousel 15s linear infinite !important;
+}
+
+@keyframes slideCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1872px); /* 6 items: 6 * (288px width + 24px gap) = 6 * 312px = 1872px */
+  }
+}
+
+.art-carousel-wrapper:hover .art-slider-continuous {
+  animation-play-state: paused;
 }
 
 /* Animations */
