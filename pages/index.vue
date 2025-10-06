@@ -16,12 +16,12 @@
 
     <!-- Welcome Section with Diagonal Background -->
     <section class="welcome-section relative overflow-hidden -mt-24">
-      <div class="diagonal-bg bg-gradient-to-br from-[#B8D4F1] to-[#E8D4F1]"></div>
+      <div class="diagonal-bg bg-gradient-to-br from-[#B8D4F1] to-[#C9DDFF]"></div>
       
       <div class="container mx-auto px-8 pt-32 pb-48 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="text-content">
-            <h2 class="text-4xl font-light text-pink-300 mb-6">Welcome</h2>
+            <h2 class="text-4xl font-light text-[#DE6C83] font-bold mb-6">Welcome</h2>
             <p class="text-gray-600 leading-relaxed text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -60,7 +60,7 @@
 
     <!-- Digital Art Section -->
     <section class="digital-art-section relative overflow-hidden -mt-40">
-      <div class="diagonal-bg bg-[#E89BB5]"></div>
+      <div class="diagonal-bg bg-[#DE6C83]"></div>
       <div class="container mx-auto px-8 pt-32 pb-48 relative z-10">
         <div class="angled-content">
           <div class="text-wrapper mb-16 overflow-hidden">
